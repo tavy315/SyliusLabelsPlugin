@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Tavy315\SyliusLabelsPlugin
+        psr4_prefix: Tavy315\SyliusLabelsPlugin

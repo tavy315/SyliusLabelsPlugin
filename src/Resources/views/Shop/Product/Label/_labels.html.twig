@@ -1,0 +1,4 @@
+{# @var \Tavy315\SyliusLabelsPlugin\Model\LabelInterface[] labels #}
+{% for label in labels %}
+    {% include "@Tavy315SyliusLabelsPlugin/Shop/Product/Label/_label.html.twig" with {'label': label} %}
+{% endfor %}
