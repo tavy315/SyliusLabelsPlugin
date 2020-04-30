@@ -10,6 +10,8 @@ use Sylius\Component\Resource\Factory\Factory;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Tavy315\SyliusLabelsPlugin\Form\Type\LabelType;
+use Tavy315\SyliusLabelsPlugin\Form\Type\Translation\LabelTranslationType;
 use Tavy315\SyliusLabelsPlugin\Model\Label;
 use Tavy315\SyliusLabelsPlugin\Model\LabelInterface;
 use Tavy315\SyliusLabelsPlugin\Model\LabelTranslation;
@@ -57,6 +59,7 @@ final class Configuration implements ConfigurationInterface
                                         ->scalarNode('interface')->defaultValue(LabelInterface::class)->cannotBeEmpty()->end()
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
                                         ->scalarNode('factory')->defaultValue(Factory::class)->end()
+                                        ->scalarNode('form')->defaultValue(LabelType::class)->cannotBeEmpty()->end()
                                     ->end()
                                 ->end()
                                 ->arrayNode('translation')
@@ -68,6 +71,7 @@ final class Configuration implements ConfigurationInterface
                                             ->children()
                                                 ->scalarNode('model')->defaultValue(LabelTranslation::class)->cannotBeEmpty()->end()
                                                 ->scalarNode('interface')->defaultValue(LabelTranslationInterface::class)->cannotBeEmpty()->end()
+                                                ->scalarNode('form')->defaultValue(LabelTranslationType::class)->cannotBeEmpty()->end()
                                             ->end()
                                         ->end()
                                     ->end()

@@ -1,0 +1,3 @@
+tavy315_sylius_labels_admin:
+    resource: routing/admin.yaml
+    prefix: /admin

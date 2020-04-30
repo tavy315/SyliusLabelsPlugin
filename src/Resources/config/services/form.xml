@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+
+        <parameter key="tavy315_sylius_labels.form.type.label.validation_groups" type="collection">
+            <parameter>tavy315_sylius_labels</parameter>
+        </parameter>
+
+        <parameter key="tavy315_sylius_labels.form.type.label_translation.validation_groups" type="collection">
+            <parameter>tavy315_sylius_labels</parameter>
+        </parameter>
+
+    </parameters>
+    <services>
+
+        <service id="tavy315_sylius_labels.form.type.label" class="Tavy315\SyliusLabelsPlugin\Form\Type\LabelType">
+            <argument>%tavy315_sylius_labels.model.label.class%</argument>
+            <argument>%tavy315_sylius_labels.form.type.label.validation_groups%</argument>
+            <tag name="form.type" />
+        </service>
+
+        <service id="tavy315_sylius_labels.form.type.label_translation" class="Tavy315\SyliusLabelsPlugin\Form\Type\Translation\LabelTranslationType">
+            <argument>%tavy315_sylius_labels.model.label_translation.class%</argument>
+            <argument>%tavy315_sylius_labels.form.type.label_translation.validation_groups%</argument>
+            <tag name="form.type" />
+        </service>
+
+    </services>
+</container>

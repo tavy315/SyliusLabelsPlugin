@@ -1,0 +1,7 @@
+imports:
+    - { resource: "@Tavy315SyliusLabelsPlugin/Resources/config/grids/tavy315_sylius_labels_admin_label.yaml" }
+
+sylius_grid:
+    templates:
+        action:
+            tavy315_labels_default: "@Tavy315SyliusLabelsPlugin/Admin/Grid/Action/tavy315_labels_default.html.twig"

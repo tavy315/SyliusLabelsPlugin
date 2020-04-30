@@ -1,0 +1,8 @@
+tavy315_sylius_labels:
+    label:
+        code:
+            unique: There is an existing label with this code.
+            not_blank: Code cannot be blank.
+    label_translation:
+        name:
+            not_blank: Name cannot be blank.

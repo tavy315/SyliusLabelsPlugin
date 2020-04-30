@@ -11,7 +11,7 @@ class LabelTranslation extends AbstractTranslation implements LabelTranslationIn
     /** @var int */
     protected $id;
 
-    /** @var string */
+    /** @var string|null */
     protected $name;
 
     public function getId(): ?int
@@ -24,7 +24,7 @@ class LabelTranslation extends AbstractTranslation implements LabelTranslationIn
         return $this->name;
     }
 
-    public function setName(string $name): void
+    public function setName(?string $name): void
     {
         $this->name = $name;
     }

@@ -1,0 +1,7 @@
+tavy315_sylius_labels:
+    ui:
+        code: Code
+        edit_label: Edit label
+        labels: Labels
+        name: Name
+        new_label: New label

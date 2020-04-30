@@ -1,0 +1,16 @@
+tavy315_sylius_labels_admin_label:
+    resource: |
+        section: admin
+        alias: tavy315_sylius_labels.label
+        templates: SyliusAdminBundle:Crud
+        permission: true
+        redirect: update
+        grid: tavy315_sylius_labels_admin_label
+        vars:
+            all:
+                templates:
+                    form: "@Tavy315SyliusLabelsPlugin/Admin/Label/_form.html.twig"
+                    header_title: "@Tavy315SyliusLabelsPlugin/Admin/Label/_headerTitle.html.twig"
+            index:
+                icon: 'tags'
+    type: sylius.resource
