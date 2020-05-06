@@ -1,0 +1,14 @@
+<div class="ui tab" data-tab="label">
+    <h3 class="ui top attached header">{{ 'tavy315_sylius_labels.ui.labels'|trans }}</h3>
+
+    <div class="ui attached segment">
+        <div id="sylius-product-labels-tree" data-tree-root-nodes-url="{{ path('sylius_admin_ajax_label_leafs') }}">
+            {{ form_widget(form.labels) }}
+            <div class="ui inverted dimmer">
+                <div class="ui loader"></div>
+            </div>
+        </div>
+
+        {{ sylius_template_event(['sylius.admin.product.' ~ action ~ '.tab_label', 'sylius.admin.product.tab_label'], {'form': form}) }}
+    </div>
+</div>

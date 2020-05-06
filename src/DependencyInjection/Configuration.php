@@ -16,6 +16,7 @@ use Tavy315\SyliusLabelsPlugin\Model\Label;
 use Tavy315\SyliusLabelsPlugin\Model\LabelInterface;
 use Tavy315\SyliusLabelsPlugin\Model\LabelTranslation;
 use Tavy315\SyliusLabelsPlugin\Model\LabelTranslationInterface;
+use Tavy315\SyliusLabelsPlugin\Repository\LabelRepository;
 
 final class Configuration implements ConfigurationInterface
 {
@@ -60,6 +61,7 @@ final class Configuration implements ConfigurationInterface
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
                                         ->scalarNode('factory')->defaultValue(Factory::class)->end()
                                         ->scalarNode('form')->defaultValue(LabelType::class)->cannotBeEmpty()->end()
+                                        ->scalarNode('repository')->defaultValue(LabelRepository::class)->cannotBeEmpty()->end()
                                     ->end()
                                 ->end()
                                 ->arrayNode('translation')

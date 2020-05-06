@@ -5,11 +5,19 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
-        <service id="tavy315_sylius_labels.listener.menu.label"
-                 class="Tavy315\SyliusLabelsPlugin\Menu\LabelsMenuBuilder">
+        <service class="Tavy315\SyliusLabelsPlugin\Menu\LabelsMenuBuilder"
+                 id="tavy315_sylius_labels.listener.menu.label">
             <tag name="kernel.event_listener"
                  event="sylius.menu.admin.main"
                  method="addLabelsItem" />
+        </service>
+
+        <service class="Tavy315\SyliusLabelsPlugin\Menu\AdminProductFormMenuListener"
+                 id="tavy315_sylius_labels.listener.admin.product.form.menu_builder">
+            <tag name="kernel.event_listener"
+                 event="sylius.menu.admin.product.form"
+                 method="addItems" />
+            <argument type="service" id="sylius.theme.translation.theme_aware_translator.inner" />
         </service>
 
     </services>

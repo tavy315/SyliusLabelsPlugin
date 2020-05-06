@@ -1,2 +1,9 @@
 imports:
     - { resource: "@Tavy315SyliusLabelsPlugin/Resources/config/app/grids.yaml" }
+
+jms_serializer:
+    metadata:
+        directories:
+            tavy315-label:
+                namespace_prefix: "Tavy315\\SyliusLabelsPlugin\\Model"
+                path: "@Tavy315SyliusLabelsPlugin/Resources/config/serializer"

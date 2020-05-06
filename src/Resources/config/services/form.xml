@@ -16,13 +16,27 @@
     </parameters>
     <services>
 
-        <service id="tavy315_sylius_labels.form.type.label" class="Tavy315\SyliusLabelsPlugin\Form\Type\LabelType">
+        <service class="Tavy315\SyliusLabelsPlugin\Form\Extension\ProductTypeExtension"
+                 id="tavy315_sylius_labels.form.extension.type.product">
+            <tag name="form.type_extension" extended_type="Sylius\Bundle\ProductBundle\Form\Type\ProductType" priority="-5" />
+        </service>
+
+        <service class="Tavy315\SyliusLabelsPlugin\Form\Type\ProductLabelAutocompleteChoiceType"
+                 id="tavy315_sylius_labels.form.type.autocomplete_product_label_choice">
+            <argument type="service" id="@tavy315_sylius_labels.factory.label" />
+            <argument type="service" id="@tavy315_sylius_labels.repository.label" />
+            <tag name="form.type" />
+        </service>
+
+        <service class="Tavy315\SyliusLabelsPlugin\Form\Type\LabelType"
+                 id="tavy315_sylius_labels.form.type.label">
             <argument>%tavy315_sylius_labels.model.label.class%</argument>
             <argument>%tavy315_sylius_labels.form.type.label.validation_groups%</argument>
             <tag name="form.type" />
         </service>
 
-        <service id="tavy315_sylius_labels.form.type.label_translation" class="Tavy315\SyliusLabelsPlugin\Form\Type\Translation\LabelTranslationType">
+        <service class="Tavy315\SyliusLabelsPlugin\Form\Type\Translation\LabelTranslationType"
+                 id="tavy315_sylius_labels.form.type.label_translation">
             <argument>%tavy315_sylius_labels.model.label_translation.class%</argument>
             <argument>%tavy315_sylius_labels.form.type.label_translation.validation_groups%</argument>
             <tag name="form.type" />
