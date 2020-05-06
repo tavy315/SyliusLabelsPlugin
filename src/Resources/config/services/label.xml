@@ -5,9 +5,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
-        <service id="tavy315_sylius_labels.repository.label" class="Tavy315\SyliusLabelsPlugin\Repository\LabelRepository">
-            <argument type="service" id="sylius.theme.loader" />
-        </service>
+        <service id="tavy315_sylius_labels.repository.label" class="Tavy315\SyliusLabelsPlugin\Repository\LabelRepository" />
 
         <service id="Tavy315\SyliusLabelsPlugin\Repository\LabelRepositoryInterface" alias="tavy315_sylius_labels.repository.label" />
 

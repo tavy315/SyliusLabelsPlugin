@@ -34,17 +34,17 @@ final class ProductLabelAutocompleteChoiceType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        if ($options['multiple']) {
-            $builder->addModelTransformer(
-                new RecursiveTransformer(
-                    new ProductLabelToLabelTransformer(
-                        $this->labelFactory,
-                        $this->labelRepository,
-                        $options['product']
-                    )
-                )
-            );
-        }
+//        if ($options['multiple']) {
+//            $builder->addModelTransformer(
+//                new RecursiveTransformer(
+//                    new ProductLabelToLabelTransformer(
+//                        $this->labelFactory,
+//                        $this->labelRepository,
+//                        $options['product']
+//                    )
+//                )
+//            );
+//        }
 
         if (!$options['multiple']) {
             $builder->addModelTransformer(
