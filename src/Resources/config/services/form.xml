@@ -23,8 +23,6 @@
 
         <service class="Tavy315\SyliusLabelsPlugin\Form\Type\ProductLabelAutocompleteChoiceType"
                  id="tavy315_sylius_labels.form.type.autocomplete_product_label_choice">
-            <argument type="service" id="tavy315_sylius_labels.factory.label" />
-            <argument type="service" id="tavy315_sylius_labels.repository.label" />
             <tag name="form.type" />
         </service>
 
