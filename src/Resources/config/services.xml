@@ -4,6 +4,8 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <imports>
         <import resource="services/form.xml" />
+        <import resource="services/label.xml" />
         <import resource="services/menu.xml" />
+        <import resource="services/sonata_events.xml" />
     </imports>
 </container>
