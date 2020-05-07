@@ -20,8 +20,8 @@ final class ProductTypeExtension extends AbstractTypeExtension
             $form = $event->getForm();
 
             $form->add('labels', ProductLabelAutocompleteChoiceType::class, [
-                'label'    => 'tavy315_sylius_labels.ui.labels',
-                'product'  => $product,
+                'label' => 'tavy315_sylius_labels.ui.labels',
+                'product' => $product,
                 'multiple' => true,
             ]);
         });
@@ -29,6 +29,6 @@ final class ProductTypeExtension extends AbstractTypeExtension
 
     public function getExtendedTypes(): iterable
     {
-        return [ ProductType::class ];
+        return [ProductType::class];
     }
 }

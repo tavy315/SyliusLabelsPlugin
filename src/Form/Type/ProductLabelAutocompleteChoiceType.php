@@ -17,8 +17,8 @@ final class ProductLabelAutocompleteChoiceType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'resource'     => 'tavy315_sylius_labels.label',
-            'choice_name'  => 'name',
+            'resource' => 'tavy315_sylius_labels.label',
+            'choice_name' => 'name',
             'choice_value' => 'code',
         ]);
 

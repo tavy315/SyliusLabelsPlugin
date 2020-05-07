@@ -14,7 +14,7 @@ final class LabelsMenuBuilder
         /** @var ItemInterface $marketingMenu */
         $marketingMenu = $event->getMenu()->getChild('marketing');
 
-        $marketingMenu->addChild('labels', [ 'route' => 'tavy315_sylius_labels_admin_label_index' ])
+        $marketingMenu->addChild('labels', ['route' => 'tavy315_sylius_labels_admin_label_index'])
                       ->setLabel('tavy315_sylius_labels.ui.labels')
                       ->setLabelAttribute('icon', 'tags');
     }

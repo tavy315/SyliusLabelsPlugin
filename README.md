@@ -4,7 +4,6 @@
 [![Latest Unstable Version][ico-unstable-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
 [![Build Status][ico-github-actions]][link-github-actions]
-[![Quality Score][ico-code-quality]][link-code-quality]
 
 The labels plugin for [Sylius](https://sylius.com/) allows you to configure nice badges for different set of products
 based on specific rules. It provides a common set of configuration by default and is very flexible when it comes to adding new ones.
@@ -20,6 +19,8 @@ Shop:
 Admin:
 
 ![Screenshot showing admin labels list](docs/images/admin-labels-index.png)
+
+![Screenshot showing admin product labels](docs/images/admin-product-labels.png)
 
 ## Installation
 
@@ -182,4 +183,3 @@ From now on you should be able to add new labels in the admin panel. Once you ad
 
 [link-packagist]: https://packagist.org/packages/tavy315/sylius-labels-plugin
 [link-github-actions]: https://github.com/tavy315/SyliusLabelsPlugin/actions
-[link-code-quality]: https://scrutinizer-ci.com/g/tavy315/SyliusLabelsPlugin

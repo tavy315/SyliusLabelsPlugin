@@ -9,9 +9,7 @@ use Symfony\Component\Translation\Translator;
 
 final class AdminProductFormMenuListener
 {
-    /**
-     * @var Translator
-     */
+    /** @var Translator */
     private $translator;
 
     public function __construct(Translator $translator)

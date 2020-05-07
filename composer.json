@@ -1,8 +1,11 @@
 {
     "name": "tavy315/sylius-labels-plugin",
     "type": "sylius-plugin",
-    "keywords": [ "sylius", "sylius-plugin" ],
     "description": "Sylius plugin for product labels.",
+    "keywords": [
+        "sylius",
+        "sylius-plugin"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.2",
@@ -33,7 +36,6 @@
         "symfony/web-profiler-bundle": "^4.3",
         "symfony/web-server-bundle": "^4.3"
     },
-    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Tavy315\\SyliusLabelsPlugin\\": "src/",
@@ -41,6 +43,15 @@
         }
     },
     "autoload-dev": {
-        "classmap": [ "tests/Application/Kernel.php" ]
+        "classmap": [
+            "tests/Application/Kernel.php"
+        ]
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": [
+            "vendor/bin/phpstan analyse -c phpstan.neon -l max src"
+        ],
+        "check-style": "vendor/bin/ecs check src"
     }
 }
