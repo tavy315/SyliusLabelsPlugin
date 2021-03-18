@@ -4,12 +4,12 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                                       http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Tavy315\SyliusLabelsPlugin\Model\LabelTranslation" table="tavy315_sylius_product_label_translation">
+    <mapped-superclass name="Tavy315\SyliusLabelsPlugin\Model\LabelTranslation" table="tavy315_sylius_product_label_translation">
         <id name="id" type="integer">
             <generator strategy="AUTO"/>
         </id>
 
         <field name="name" type="string" nullable="true" />
-    </entity>
+    </mapped-superclass>
 
 </doctrine-mapping>
