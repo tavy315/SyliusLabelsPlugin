@@ -2,7 +2,7 @@ tavy315_sylius_labels_admin_label:
     resource: |
         section: admin
         alias: tavy315_sylius_labels.label
-        templates: SyliusAdminBundle:Crud
+        templates: '@SyliusAdmin/Crud'
         permission: true
         redirect: update
         grid: tavy315_sylius_labels_admin_label

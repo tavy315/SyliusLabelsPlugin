@@ -6,6 +6,5 @@
         <import resource="services/form.xml" />
         <import resource="services/label.xml" />
         <import resource="services/menu.xml" />
-        <import resource="services/sonata_events.xml" />
     </imports>
 </container>

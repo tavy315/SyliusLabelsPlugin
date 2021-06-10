@@ -1,6 +1,14 @@
 imports:
     - { resource: "@Tavy315SyliusLabelsPlugin/Resources/config/app/grids.yaml" }
 
+sylius_ui:
+    events:
+        sylius.admin.product.update.javascripts:
+            blocks:
+                tavy315_sylius_labels_product:
+                    template: "@Tavy315SyliusLabelsPlugin/Admin/_javascripts.html.twig"
+                    priority: 0
+
 jms_serializer:
     metadata:
         directories:
