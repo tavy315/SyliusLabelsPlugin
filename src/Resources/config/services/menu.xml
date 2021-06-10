@@ -17,7 +17,6 @@
             <tag name="kernel.event_listener"
                  event="sylius.menu.admin.product.form"
                  method="addItems" />
-            <argument type="service" id="sylius.theme.translation.theme_aware_translator.inner" />
         </service>
 
     </services>
