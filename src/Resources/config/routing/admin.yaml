@@ -19,7 +19,7 @@ tavy315_sylius_admin_ajax_labels_leafs:
     path: /ajax/labels/leafs
     methods: [GET]
     defaults:
-        _controller: tavy315_sylius_labels.controller.label:indexAction
+        _controller: tavy315_sylius_labels.controller.label::indexAction
         _format: json
         _sylius:
             serialization_groups: [Autocomplete]

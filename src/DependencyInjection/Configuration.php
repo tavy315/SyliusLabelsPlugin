@@ -13,9 +13,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Tavy315\SyliusLabelsPlugin\Form\Type\LabelType;
 use Tavy315\SyliusLabelsPlugin\Form\Type\Translation\LabelTranslationType;
 use Tavy315\SyliusLabelsPlugin\Model\Label;
-use Tavy315\SyliusLabelsPlugin\Model\LabelInterface;
 use Tavy315\SyliusLabelsPlugin\Model\LabelTranslation;
-use Tavy315\SyliusLabelsPlugin\Model\LabelTranslationInterface;
 use Tavy315\SyliusLabelsPlugin\Repository\LabelRepository;
 
 final class Configuration implements ConfigurationInterface
@@ -51,7 +49,6 @@ final class Configuration implements ConfigurationInterface
                                     ->addDefaultsIfNotSet()
                                     ->children()
                                         ->scalarNode('model')->defaultValue(Label::class)->cannotBeEmpty()->end()
-                                        ->scalarNode('interface')->defaultValue(LabelInterface::class)->cannotBeEmpty()->end()
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
                                         ->scalarNode('factory')->defaultValue(Factory::class)->end()
                                         ->scalarNode('form')->defaultValue(LabelType::class)->cannotBeEmpty()->end()
@@ -66,7 +63,6 @@ final class Configuration implements ConfigurationInterface
                                             ->addDefaultsIfNotSet()
                                             ->children()
                                                 ->scalarNode('model')->defaultValue(LabelTranslation::class)->cannotBeEmpty()->end()
-                                                ->scalarNode('interface')->defaultValue(LabelTranslationInterface::class)->cannotBeEmpty()->end()
                                                 ->scalarNode('form')->defaultValue(LabelTranslationType::class)->cannotBeEmpty()->end()
                                             ->end()
                                         ->end()
