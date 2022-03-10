@@ -1,0 +1,8 @@
+imports:
+    - { resource: "@Tavy315SyliusLabelsPlugin/Resources/config/app/config.yaml" }
+
+tavy315_sylius_labels:
+    resources:
+        label:
+            classes:
+                model: Tests\Tavy315\SyliusLabelsPlugin\App\Entity\Label

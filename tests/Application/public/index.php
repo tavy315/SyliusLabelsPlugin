@@ -1,8 +1,10 @@
 <?php
 
-use Tests\Tavy315\SyliusLabelsPlugin\Application\Kernel;
-use Symfony\Component\Debug\Debug;
+declare(strict_types=1);
+
+use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
+use Tests\FluxSE\SyliusPayumMoneticoPlugin\Application\Kernel;
 
 require dirname(__DIR__).'/config/bootstrap.php';
 
