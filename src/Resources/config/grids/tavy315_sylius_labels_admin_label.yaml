@@ -3,7 +3,7 @@ sylius_grid:
         tavy315_sylius_labels_admin_label:
             driver:
                 options:
-                    class: "%tavy315_sylius_labels.model.label.class%"
+                    class: 'expr:parameter("tavy315_sylius_labels.model.label.class")'
             fields:
                 code:
                     type: string
