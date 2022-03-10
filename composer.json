@@ -40,14 +40,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Tavy315\\SyliusLabelsPlugin\\": "src/",
-            "Tests\\Tavy315\\SyliusLabelsPlugin\\": "tests/"
+            "Tavy315\\SyliusLabelsPlugin\\": "src/"
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/Application/Kernel.php"
-        ]
+        "psr-4": {
+            "Tests\\Tavy315\\SyliusLabelsPlugin\\": "tests/",
+            "Tests\\Tavy315\\SyliusLabelsPlugin\\App\\": "tests/Application/src/"
+        }
     },
     "prefer-stable": true,
     "scripts": {
