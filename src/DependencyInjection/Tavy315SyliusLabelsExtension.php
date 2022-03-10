@@ -27,7 +27,7 @@ final class Tavy315SyliusLabelsExtension extends AbstractResourceExtension imple
     }
 
     protected function getNamespacesOfMigrationsExecutedBefore(): array
-{
+    {
         return [
             'Sylius\Bundle\CoreBundle\Migrations',
         ];

@@ -29,7 +29,7 @@ class LabelRepository extends EntityRepository implements LabelRepositoryInterfa
                              ->addSelect('translation')
                              ->leftJoin('l.translations', 'translation');
 
-        if ($locale !== null) {
+        if (null !== $locale) {
             $queryBuilder->andWhere('translation.locale = :locale')
                          ->setParameter('locale', $locale);
         }
