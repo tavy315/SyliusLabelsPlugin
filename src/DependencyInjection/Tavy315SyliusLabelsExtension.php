@@ -26,6 +26,9 @@ final class Tavy315SyliusLabelsExtension extends AbstractResourceExtension imple
         return '@Tavy315SyliusLabelsPlugin/Migrations';
     }
 
+    /**
+     * @return string[]
+     */
     protected function getNamespacesOfMigrationsExecutedBefore(): array
     {
         return [
