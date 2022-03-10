@@ -26,9 +26,6 @@ final class Tavy315SyliusLabelsExtension extends AbstractResourceExtension imple
         return '@Tavy315SyliusLabelsPlugin/Migrations';
     }
 
-    /**
-     * @return string[]
-     */
     protected function getNamespacesOfMigrationsExecutedBefore(): array
     {
         return [
@@ -42,14 +39,14 @@ final class Tavy315SyliusLabelsExtension extends AbstractResourceExtension imple
         $configuration = $this->getConfiguration([], $container);
         $config = $this->processConfiguration($configuration, $configs);
 
-        $this->registerResources('tavy315_sylius_labels', $config['driver'], $config['resources'], $container);
-
         $loader = new XmlFileLoader(
             $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
 
         $loader->load('services.xml');
+
+        $this->registerResources('tavy315_sylius_labels', $config['driver'], $config['resources'], $container);
     }
 
     public function prepend(ContainerBuilder $container): void
