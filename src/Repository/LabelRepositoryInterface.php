@@ -8,5 +8,5 @@ use Sylius\Component\Resource\Repository\RepositoryInterface;
 
 interface LabelRepositoryInterface extends RepositoryInterface
 {
-    public function findAllWithTranslation(?string $labelCode): array;
+    public function findAllWithTranslation(?string $locale): array;
 }
