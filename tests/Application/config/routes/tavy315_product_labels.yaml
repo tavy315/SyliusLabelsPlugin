@@ -1,0 +1,2 @@
+tavy315_product_labels:
+    resource: "@Tavy315SyliusLabelsPlugin/Resources/config/routing.yaml"

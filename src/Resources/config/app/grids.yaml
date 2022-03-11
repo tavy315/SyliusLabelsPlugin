@@ -1,5 +1,5 @@
 imports:
-    - { resource: "@Tavy315SyliusLabelsPlugin/Resources/config/grids/tavy315_sylius_labels_admin_label.yaml" }
+    - { resource: "../grids/tavy315_sylius_labels_admin_label.yaml" }
 
 sylius_grid:
     templates:

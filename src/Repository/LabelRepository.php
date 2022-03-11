@@ -4,18 +4,11 @@ declare(strict_types=1);
 
 namespace Tavy315\SyliusLabelsPlugin\Repository;
 
-use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\QueryBuilder;
 use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
-use Tavy315\SyliusLabelsPlugin\Model\Label;
 
 class LabelRepository extends EntityRepository implements LabelRepositoryInterface
 {
-    public function __construct(EntityManagerInterface $entityManager)
-    {
-        parent::__construct($entityManager, $entityManager->getClassMetadata(Label::class));
-    }
-
     public function findAllWithTranslation(?string $locale = null): array
     {
         return $this->createTranslationBasedQueryBuilder($locale)
@@ -29,7 +22,7 @@ class LabelRepository extends EntityRepository implements LabelRepositoryInterfa
                              ->addSelect('translation')
                              ->leftJoin('l.translations', 'translation');
 
-        if ($locale !== null) {
+        if (null !== $locale) {
             $queryBuilder->andWhere('translation.locale = :locale')
                          ->setParameter('locale', $locale);
         }

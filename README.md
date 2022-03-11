@@ -164,8 +164,8 @@ $ php bin/console doctrine:migrations:migrate
 ```
  
 ### Step 7: Add labels to your product templates 
-Add labels to your product box template. By default, you should use `templates/bundles/SyliusShopBundle/Product/_box.html.twig` 
-path. Check out our [_box.html.twig](tests/Application/templates/bundles/SyliusShopBundle/Product/_box.html.twig) file for a reference.
+Add labels to your product box template. By default, you should use `templates/bundles/SyliusShopBundle/Product/__mainImage.html.twig` 
+path. Check out our [__mainImage.html.twig](tests/Application/templates/bundles/SyliusShopBundle/Product/__mainImage.html.twig) file for a reference.
 
 Note the line: `{% include "@Tavy315SyliusLabelsPlugin/Shop/Product/Label/_labels.html.twig" with {'labels' : product.labels} %}`.
 

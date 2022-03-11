@@ -16,7 +16,7 @@ final class LabelType extends AbstractResourceType
     {
         $builder
             ->add('code', TextType::class, [
-                'disabled' => $builder->getData()->getCode() !== null,
+                'disabled' => null !== $builder->getData()->getCode(),
                 'label' => 'tavy315_sylius_labels.ui.code',
             ])
             ->add('translations', ResourceTranslationsType::class, [

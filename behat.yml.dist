@@ -1,40 +1,28 @@
 imports:
     - vendor/sylius/sylius/src/Sylius/Behat/Resources/config/suites.yml
-    - tests/Behat/Resources/suites.yml
+    - tests/Behat/Resources/suites.yaml
 
 default:
     extensions:
-        Lakion\Behat\MinkDebugExtension:
+        DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
+
+        FriendsOfBehat\MinkDebugExtension:
             directory: etc/build
             clean_start: false
             screenshot: true
 
         Behat\MinkExtension:
             files_path: "%paths.base%/vendor/sylius/sylius/src/Sylius/Behat/Resources/fixtures/"
-            base_url: "http://localhost:8080/"
+            base_url: "https://127.0.0.1:8080/"
             default_session: symfony
-            javascript_session: chrome
+            javascript_session: chrome_headless
             sessions:
                 symfony:
                     symfony: ~
-                chrome:
-                    selenium2:
-                        browser: chrome
-                        capabilities:
-                            browserName: chrome
-                            browser: chrome
-                            version: ""
-                            marionette: null # https://github.com/Behat/MinkExtension/pull/311
-                            chrome:
-                                switches:
-                                    - "start-fullscreen"
-                                    - "start-maximized"
-                                    - "no-sandbox"
-                            extra_capabilities:
-                                unexpectedAlertBehaviour: accept
-                firefox:
-                    selenium2:
-                        browser: firefox
+                chrome_headless:
+                    chrome:
+                            api_url: http://127.0.0.1:9222
+                            validate_certificate: false
             show_auto: false
 
         FriendsOfBehat\SymfonyExtension:
@@ -43,7 +31,3 @@ default:
                 class: Tests\Tavy315\SyliusLabelsPlugin\Application\Kernel
 
         FriendsOfBehat\VariadicExtension: ~
-
-        FriendsOfBehat\SuiteSettingsExtension:
-            paths:
-                - "features"

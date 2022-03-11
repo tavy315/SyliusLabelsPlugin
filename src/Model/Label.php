@@ -25,7 +25,7 @@ class Label implements LabelInterface
 
     public function __toString(): string
     {
-        return $this->getName();
+        return $this->getName() ?? '';
     }
 
     public function getId(): ?int
@@ -40,6 +40,10 @@ class Label implements LabelInterface
 
     public function setName(?string $name): void
     {
+        if (null === $name) {
+            return;
+        }
+
         $this->getLabelTranslation()->setName($name);
     }
 
