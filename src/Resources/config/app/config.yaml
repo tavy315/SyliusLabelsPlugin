@@ -8,10 +8,3 @@ sylius_ui:
                 tavy315_sylius_labels_product:
                     template: "@Tavy315SyliusLabelsPlugin/Admin/_javascripts.html.twig"
                     priority: 0
-
-jms_serializer:
-    metadata:
-        directories:
-            tavy315-label:
-                namespace_prefix: "Tavy315\\SyliusLabelsPlugin\\Model"
-                path: "@Tavy315SyliusLabelsPlugin/Resources/config/serializer"
